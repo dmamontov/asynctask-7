@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/dmamontov/asynctask.svg?branch=master)](https://travis-ci.org/dmamontov/asynctask-7)
-[![Latest Stable Version](https://poser.pugx.org/dmamontov/asynctask/v/stable.svg)](https://packagist.org/packages/dmamontov/asynctask-7)
-[![License](https://poser.pugx.org/dmamontov/asynctask/license.svg)](https://packagist.org/packages/dmamontov/asynctask-7)
-[![Total Downloads](https://poser.pugx.org/dmamontov/asynctask/downloads)](https://packagist.org/packages/dmamontov/asynctask-7)
+[![Build Status](https://travis-ci.org/dmamontov/asynctask-7.svg?branch=master)](https://travis-ci.org/dmamontov/asynctask-7)
+[![Latest Stable Version](https://poser.pugx.org/dmamontov/asynctask-7/v/stable.svg)](https://packagist.org/packages/dmamontov/asynctask-7)
+[![License](https://poser.pugx.org/dmamontov/asynctask-7/license.svg)](https://packagist.org/packages/dmamontov/asynctask-7)
+[![Total Downloads](https://poser.pugx.org/dmamontov/asynctask-7/downloads)](https://packagist.org/packages/dmamontov/asynctask-7)
 
 AsyncTask
 =========
