@@ -24,7 +24,7 @@
         "email": "mamontov@bringer.pro"
     },
     "autoload": {
-        "psr-0": { "AsyncTask\\": "src/" }
+        "psr-0": { "DM\\AsyncTask\\": "src/" }
     },
     "extra": {
         "branch-alias": {
