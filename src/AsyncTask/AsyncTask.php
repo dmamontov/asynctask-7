@@ -38,14 +38,14 @@
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @since     File available since Release 2.0.0
+ * @since     File available since Release 2.0.2
  */
 
-namespace DM\AsyncTask;
+namespace AsyncTask;
 
-use DM\AsyncTask\Adapter\SharedMemoryAdapter;
-use DM\AsyncTask\Exception\AsyncTaskException;
-use DM\AsyncTask\Interfaces\AdapterInterface;
+use AsyncTask\Adapter\SharedMemoryAdapter;
+use AsyncTask\Exception\AsyncTaskException;
+use AsyncTask\Interfaces\AdapterInterface;
 
 /**
  * AsyncTask enables proper and easy use of the thread. This class allows to perform background operations and publish results on the thread without having to manipulate threads and/or handlers.
@@ -54,10 +54,10 @@ use DM\AsyncTask\Interfaces\AdapterInterface;
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @version   Release: 2.0.0
+ * @version   Release: 2.0.2
  *
  * @see      https://github.com/dmamontov/asynctask
- * @since     Class available since Release 2.0.0
+ * @since     Class available since Release 2.0.2
  * @abstract
  */
 abstract class AsyncTask

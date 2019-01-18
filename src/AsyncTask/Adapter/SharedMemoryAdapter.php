@@ -38,14 +38,14 @@
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @since     File available since Release 2.0.0
+ * @since     File available since Release 2.0.2
  */
 
-namespace DM\AsyncTask\Adapter;
+namespace AsyncTask\Adapter;
 
-use DM\AsyncTask\Adapter;
-use DM\AsyncTask\Exception\AdapterException;
-use DM\AsyncTask\Interfaces\AdapterInterface;
+use AsyncTask\Adapter;
+use AsyncTask\Exception\AdapterException;
+use AsyncTask\Interfaces\AdapterInterface;
 
 /**
  * Adapter based on Shared Memory.
@@ -54,10 +54,10 @@ use DM\AsyncTask\Interfaces\AdapterInterface;
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @version   Release: 2.0.0
+ * @version   Release: 2.0.2
  *
  * @see      https://github.com/dmamontov/asynctask
- * @since     Class available since Release 2.0.0
+ * @since     Class available since Release 2.0.2
  */
 class SharedMemoryAdapter extends Adapter implements AdapterInterface
 {
