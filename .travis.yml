@@ -9,4 +9,8 @@ php:
   - '7.1'
   - '7.2'
 
+before_script:
+    - flags="-o"
+    - composer install $flags
+
 script: phpunit -c phpunit.xml.dist
