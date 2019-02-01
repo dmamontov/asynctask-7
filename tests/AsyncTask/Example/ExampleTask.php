@@ -1,6 +1,6 @@
 <?php
 
-namespace AsyncTask\Test;
+namespace AsyncTask\Example;
 
 use AsyncTask\AsyncTask;
 use AsyncTask\Collection;

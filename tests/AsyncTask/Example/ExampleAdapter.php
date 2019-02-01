@@ -1,12 +1,12 @@
  <?php
 
-namespace AsyncTask\Test;
+namespace AsyncTask\Example;
 
 use AsyncTask\Adapter;
- use AsyncTask\Interfaces\AdapterInterface;
+use AsyncTask\Interfaces\AdapterInterface;
 
- class ExampleAdapter extends Adapter implements AdapterInterface
- {
+class ExampleAdapter extends Adapter implements AdapterInterface
+{
      public function init(): AdapterInterface
      {
          return $this;
@@ -41,4 +41,4 @@ use AsyncTask\Adapter;
      {
          return $this;
      }
- }
+}

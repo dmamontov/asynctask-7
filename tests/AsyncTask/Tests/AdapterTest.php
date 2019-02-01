@@ -6,8 +6,8 @@ namespace AsyncTask\Tests;
 
 use AsyncTask\Adapter;
 use AsyncTask\Interfaces\AdapterInterface;
-use AsyncTask\Test\ExampleAdapter;
-use AsyncTask\Test\ExampleTask;
+use AsyncTask\Example\ExampleAdapter;
+use AsyncTask\Example\ExampleTask;
 use PHPUnit\Framework\TestCase;
 
 final class AdapterTest extends TestCase

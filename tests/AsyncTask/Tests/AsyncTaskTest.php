@@ -8,8 +8,8 @@ use AsyncTask\Adapter;
 use AsyncTask\Adapter\SharedMemoryAdapter;
 use AsyncTask\AsyncTask;
 use AsyncTask\Exception\AsyncTaskException;
-use AsyncTask\Test\ExampleAdapter;
-use AsyncTask\Test\ExampleTask;
+use AsyncTask\Example\ExampleAdapter;
+use AsyncTask\Example\ExampleTask;
 use PHPUnit\Framework\TestCase;
 
 final class AsyncTaskTest extends TestCase
