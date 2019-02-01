@@ -88,7 +88,7 @@ interface AdapterInterface
      *
      * @return bool
      */
-    public function has($key, bool $parent): bool;
+    public function has($key, bool $parent = false): bool;
 
     /**
      * Removes a variable created by the adapter.
@@ -98,7 +98,7 @@ interface AdapterInterface
      *
      * @return bool
      */
-    public function remove($key, bool $parent): bool;
+    public function remove($key, bool $parent = false): bool;
 
     /**
      * Gets the variable created by the adapter.

@@ -115,9 +115,11 @@ abstract class AsyncTask
      * @param Collection $collection
      *
      * @throws AsyncTaskException
+     *
+     * @return AsyncTask
      * @final
      */
-    final public function execute(Collection $collection = null)
+    final public function execute(Collection $collection = null): AsyncTask
     {
         if (Adapter::STATUS_RUNNING == $this->getStatus()) {
             throw new AsyncTaskException('The previous process is not yet complete.');
@@ -159,9 +161,15 @@ abstract class AsyncTask
                         PidSystem::TYPE_PPPID
                     );
 
+                    $startTime = new \DateTime('now');
                     while (true) {
+                        if (((new \DateTime('now'))->diff($startTime)->format('%s') * 1000000) < $this->getProgressDelay()) {
+                            continue;
+                        }
+
+                        $startTime = new \DateTime('now');
+
                         $this->publishProgress();
-                        usleep($this->getProgressDelay());
                     }
                     exit();
                 }
@@ -262,23 +270,18 @@ abstract class AsyncTask
      * Waiting for completion of the process.
      *
      *
-     * @param int $limit
-     *
-     * @return AsyncTask
+     * @return bool
      * @final
      */
-    final public function wait(int $limit = 10): AsyncTask
+    final public function wait(): bool
     {
-        $startTime = new \DateTime('now');
-        while (Adapter::STATUS_RUNNING == $this->getStatus()) {
-            if ((new \DateTime('now'))->diff($startTime)->format('%s') >= $limit) {
-                break;
-            }
+        if ($this->getAdapter()->has(Adapter::PID_KEY)) {
+            $process = new Process();
 
-            sleep(1);
+            return $process->wait((int) $this->getAdapter()->get(Adapter::PID_KEY));
         }
-
-        return $this;
+        
+        return true;
     }
 
     /**

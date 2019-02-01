@@ -108,11 +108,13 @@ class SharedMemoryAdapter extends Adapter implements AdapterInterface
     /**
      * {@inheritdoc}
      */
-    public function clean($parent = false): AdapterInterface
+    public function clean(bool $parent = false): AdapterInterface
     {
-        shm_remove($this->getResource());
+        if (!is_null($this->getResource())) {
+            shm_remove($this->getResource());
+        }
 
-        if ($parent) {
+        if ($parent && !is_null($this->getParentResource())) {
             shm_remove($this->getParentResource());
         }
 

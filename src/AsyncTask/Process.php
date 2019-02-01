@@ -60,6 +60,16 @@ use AsyncTask\Exception\ProcessException;
 class Process
 {
     /**
+     * Enables asynchronous signal processing.
+     */
+    public function __construct()
+    {
+        if (!pcntl_async_signals()) {
+            pcntl_async_signals(true);
+        }
+    }
+
+    /**
      * Sets the process header.
      *
      * @param string $title
@@ -105,13 +115,25 @@ class Process
     }
 
     /**
+     * Waiting for the completion of the child process.
+     *
+     * @param int $pid
+     *
+     * @return bool
+     */
+    public function wait(int $pid): bool
+    {
+        return -1 != pcntl_waitpid($pid, $status, WNOHANG) || 0 == $pid;
+    }
+
+    /**
      * Kills child process.
      *
      * @param int $pid
      */
     public function kill(int $pid)
     {
-        PidSystem::remove($pid, PidSystem::FILTER_PID);
+        PidSystem::remove($pid, PidSystem::TYPE_PID);
         posix_kill($pid, SIGKILL);
     }
 

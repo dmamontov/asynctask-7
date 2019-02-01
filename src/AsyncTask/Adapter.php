@@ -106,21 +106,21 @@ abstract class Adapter
      *
      * @var int
      */
-    protected $id;
+    protected $id = 0;
 
     /**
      * Parent process ID.
      *
      * @var int
      */
-    protected $parentId;
+    protected $parentId = 0;
 
     /**
      * Process PID.
      *
      * @var int
      */
-    protected $pid;
+    protected $pid = 0;
 
     /**
      * Publish progress process PID.
@@ -134,7 +134,7 @@ abstract class Adapter
      *
      * @var int
      */
-    protected $status;
+    protected $status = 4;
 
     /**
      * The sequence number of the class instance.
@@ -252,7 +252,7 @@ abstract class Adapter
      */
     final public function genarateId(AsyncTask $taskClass = null): int
     {
-        return (int) $this->genarateGlobalId($taskClass).self::getLine().$this->getTaskNumber();
+        return (int) $this->genarateParentId($taskClass).self::getLine().$this->getTaskNumber();
     }
 
     /**
@@ -394,8 +394,10 @@ abstract class Adapter
         $line = 0;
         $backtrace = debug_backtrace();
         foreach ($backtrace as $key => $trace) {
-            if ('DM\AsyncTask\AsyncTask' == $trace['class']) {
-                $line = $backtrace[$key + 1]['line'];
+            if ('AsyncTask\AsyncTask' == $trace['class']) {
+                if ($backtrace[$key + 1]['line'] > 0) {
+                    $line = $backtrace[$key + 1]['line'];
+                }
                 break;
             }
         }
