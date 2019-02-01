@@ -108,7 +108,7 @@ class PidSystem
      * @param int    $pid
      * @param string $type
      */
-    public static function remove(int $pid, string $type = self::TYPE_PID)
+    public static function remove(int $pid, string $type = self::TYPE_PID): void
     {
         foreach (new \DirectoryIterator(sys_get_temp_dir()) as $file) {
             if (false === stripos($file->getFilename(), sprintf('%s.%s.AT.', $pid, $type))) {

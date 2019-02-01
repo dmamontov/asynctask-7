@@ -76,7 +76,7 @@ class Process
      *
      * @throws ProcessException
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         if (PHP_SAPI !== 'cli') {
             throw new ProcessException('Setting the process header is only possible in cli mode.');
@@ -92,7 +92,7 @@ class Process
      *
      * @throws ProcessException
      */
-    public function untie()
+    public function untie(): void
     {
         if (false === pcntl_signal(SIGCHLD, SIG_IGN)) {
             throw new ProcessException('Failed to set a signal handler.');
@@ -131,7 +131,7 @@ class Process
      *
      * @param int $pid
      */
-    public function kill(int $pid)
+    public function kill(int $pid): void
     {
         PidSystem::remove($pid, PidSystem::TYPE_PID);
         posix_kill($pid, SIGKILL);
@@ -140,7 +140,7 @@ class Process
     /**
      * Kills all processes associated with the current class.
      */
-    public static function killAll()
+    public static function killAll(): void
     {
         foreach (PidSystem::getOpenPids(PidSystem::FILTER_ALL) as $pid) {
             posix_kill($pid, SIGKILL);

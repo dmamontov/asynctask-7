@@ -10,7 +10,7 @@ AsyncTask enables proper and easy use of the thread. This class allows to perfor
 
 
 ## Requirements
-* PHP version ~7.0.0
+* PHP version ~7.1.0
 * Module installed pcntl and posix
 * All functions pcntl, posix and shm removed from the directive disable_functions
 
@@ -20,7 +20,7 @@ AsyncTask enables proper and easy use of the thread. This class allows to perfor
 
 2) Follow in the project folder:
 ```bash
-composer require dmamontov/asynctask-7 ~2.0.3
+composer require dmamontov/asynctask-7 ~2.0.4
 ```
 
 In config `composer.json` your project will be added to the library `dmamontov/asynctask-7`, who settled in the folder `vendor/`. In the absence of a config file or folder with vendors they will be created.
