@@ -38,7 +38,7 @@
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @since     File available since Release 2.0.2
+ * @since     File available since Release 2.0.5
  */
 
 namespace AsyncTask\Interfaces;
@@ -50,10 +50,10 @@ namespace AsyncTask\Interfaces;
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @version   Release: 2.0.2
+ * @version   Release: 2.0.5
  *
  * @see      https://github.com/dmamontov/asynctask
- * @since     Interface available since Release 2.0.2
+ * @since     Interface available since Release 2.0.5
  */
 interface AdapterInterface
 {

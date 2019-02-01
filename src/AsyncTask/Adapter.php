@@ -38,7 +38,7 @@
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @since     File available since Release 2.0.2
+ * @since     File available since Release 2.0.5
  */
 
 namespace AsyncTask;
@@ -53,10 +53,10 @@ use AsyncTask\Interfaces\AdapterInterface;
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @version   Release: 2.0.2
+ * @version   Release: 2.0.5
  *
  * @see      https://github.com/dmamontov/asynctask
- * @since     Class available since Release 2.0.2
+ * @since     Class available since Release 2.0.5
  * @abstract
  */
 abstract class Adapter
@@ -391,17 +391,17 @@ abstract class Adapter
      */
     private static function getLine(): int
     {
-        $line = 0;
         $backtrace = debug_backtrace();
+
         foreach ($backtrace as $key => $trace) {
             if ('AsyncTask\AsyncTask' == $trace['class']) {
                 if ($backtrace[$key + 1]['line'] > 0) {
-                    $line = $backtrace[$key + 1]['line'];
+                    return (int) $backtrace[$key + 1]['line'];
                 }
                 break;
             }
         }
 
-        return (int) $line;
+        return 0;
     }
 }

@@ -1,0 +1,16 @@
+anguage: php
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - '7.0'
+  - '7.1'
+  - '7.2'
+
+before_script:
+    - flags="-o"
+    - composer install $flags
+
+script: php ./vendor/phpunit/phpunit/phpunit -c phpunit.xml.dist

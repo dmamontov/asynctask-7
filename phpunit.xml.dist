@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="phpunit.xsd"
+    bootstrap="./tests/bootstrap.php"
+    colors="true"
+    verbose="true"
+    processIsolation="false"
+    stopOnFailure="false">
+
+    <testsuites>
+        <testsuite name="AsyncTask">
+            <directory>tests/AsyncTask/Tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/AsyncTask</directory>
+        </whitelist>
+    </filter>
+</phpunit>
