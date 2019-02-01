@@ -1,4 +1,4 @@
-anguage: php
+language: php
 
 cache:
   directories:
