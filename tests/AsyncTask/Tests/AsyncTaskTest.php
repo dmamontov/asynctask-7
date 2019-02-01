@@ -30,7 +30,7 @@ final class AsyncTaskTest extends TestCase
             $task = new ExampleTask(new ExampleAdapter());
 
             $this->assertInstanceOf(
-                ExampleAdapter()::class,
+                ExampleAdapter::class,
                 $task->getAdapter()
             );
 
