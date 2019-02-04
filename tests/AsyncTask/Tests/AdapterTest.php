@@ -48,7 +48,7 @@ final class AdapterTest extends TestCase
 
             $id = $task->getAdapter()->getId();
 
-            $this->assertEquals(49, (int) substr((string) $id, -3, 2));
+            $this->assertEquals(47, (int) substr((string) $id, -3, 2));
         }
     }
 
@@ -62,7 +62,7 @@ final class AdapterTest extends TestCase
             $this->assertEquals(0, $adapter->getParentId());
             $task = new ExampleTask($adapter);
 
-            $token = (int) ftok(realpath(__DIR__.'/../Test/ExampleTask.php'), 'A');
+            $token = (int) ftok(realpath(__DIR__.'/../Example/ExampleTask.php'), 'A');
             $this->assertEquals($token, $task->getAdapter()->getParentId());
 
             $task->getAdapter()->setParentId(777777);
@@ -83,9 +83,9 @@ final class AdapterTest extends TestCase
             $id = $task->getAdapter()->getId();
 
             $this->assertEquals(777, (int) substr((string) $id, -3, 3));
-            $this->assertEquals(83, (int) substr((string) $id, -5, 2));
+            $this->assertEquals(81, (int) substr((string) $id, -5, 2));
 
-            $token = (int) ftok(realpath(__DIR__.'/../Test/ExampleTask.php'), 'A');
+            $token = (int) ftok(realpath(__DIR__.'/../Example/ExampleTask.php'), 'A');
             $this->assertEquals($token, (int) substr((string) $id, 0, -5));
 
             $task->getAdapter()->setId(777777);
