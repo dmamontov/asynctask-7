@@ -32,7 +32,7 @@ require 'path/to/vendor/autoload.php';
 ```
 
 ## Adapter list
-* `SahredMemory` - working
+* `SharedMemory` - working
 * ~~`FileSystem`~~ - in the process
 * ~~`Redis`~~ - in the process
 
