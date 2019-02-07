@@ -19,7 +19,7 @@ AsyncTask enables proper and easy use of the thread. This class allows to perfor
 
 
 - `SharedMemoryAdapter`:
-  - `Shm` removed from the directive `disable_functions`
+  - All functions `shm` removed from the directive `disable_functions`
 
 ## Installation
 
