@@ -9,6 +9,8 @@ AsyncTask
 
 AsyncTask enables proper and easy use of the thread. This class allows to perform background operations and publish results on the thread without having to manipulate threads and/or handlers.
 
+[The early class](https://github.com/dmamontov/asynctask) implementation supports PHP 5.3, but does not support what is implemented in this class.
+
 
 ## Requirements
 * PHP version ~7.1.0
