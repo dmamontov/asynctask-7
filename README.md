@@ -13,12 +13,11 @@ AsyncTask enables proper and easy use of the thread. This class allows to perfor
 
 
 ## Requirements
-* PHP version ~7.1.0
-* Module installed pcntl and posix
-* All functions pcntl, posix
-
-### SharedMemoryAdapter
-* Shm removed from the directive disable_functions
+- PHP version ~7.1.0
+- Module installed pcntl and posix
+- All functions pcntl, posix
+- SharedMemoryAdapter:
+  - Shm removed from the directive disable_functions
 
 ## Installation
 
