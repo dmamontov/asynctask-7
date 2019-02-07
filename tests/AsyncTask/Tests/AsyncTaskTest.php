@@ -7,9 +7,9 @@ namespace AsyncTask\Tests;
 use AsyncTask\Adapter;
 use AsyncTask\Adapter\SharedMemoryAdapter;
 use AsyncTask\AsyncTask;
-use AsyncTask\Exception\AsyncTaskException;
 use AsyncTask\Example\ExampleAdapter;
 use AsyncTask\Example\ExampleTask;
+use AsyncTask\Exception\AsyncTaskException;
 use PHPUnit\Framework\TestCase;
 
 final class AsyncTaskTest extends TestCase

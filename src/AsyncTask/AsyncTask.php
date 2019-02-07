@@ -38,7 +38,7 @@
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @since     File available since Release 2.0.5
+ * @since     File available since Release 2.0.13
  */
 
 namespace AsyncTask;
@@ -54,10 +54,10 @@ use AsyncTask\Interfaces\AdapterInterface;
  * @copyright 2019 Dmitry Mamontov <d.slonyara@gmail.com>
  * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  *
- * @version   Release: 2.0.5
+ * @version   Release: 2.0.13
  *
  * @see      https://github.com/dmamontov/asynctask
- * @since     Class available since Release 2.0.5
+ * @since     Class available since Release 2.0.13
  * @abstract
  */
 abstract class AsyncTask
@@ -123,6 +123,10 @@ abstract class AsyncTask
     {
         if (Adapter::STATUS_RUNNING == $this->getStatus()) {
             throw new AsyncTaskException('The previous process is not yet complete.');
+        }
+
+        if (0 === $this->getAdapter()->getPid()) {
+            $this->init($this->getAdapter());
         }
 
         $process = new Process();

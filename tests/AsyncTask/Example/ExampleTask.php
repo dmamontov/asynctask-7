@@ -14,6 +14,8 @@ class ExampleTask extends AsyncTask
 
     protected function doInBackground(Collection $collection)
     {
+        sleep(1);
+
         return $collection;
     }
 
