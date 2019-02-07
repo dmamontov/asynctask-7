@@ -66,6 +66,11 @@ class Process
     {
         if (!pcntl_async_signals()) {
             pcntl_async_signals(true);
+
+            pcntl_signal(SIGINT, function ($signal) {
+                Process::killAll();
+                exit();
+            });
         }
     }
 
