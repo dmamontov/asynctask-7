@@ -126,7 +126,7 @@ abstract class AsyncTask
         }
 
         if (0 === $this->getAdapter()->getPid()) {
-            $this->init($this->getAdapter());
+            $this->init(!is_null($this->getAdapter()) ? $this->getAdapter() : new SharedMemoryAdapter());
         }
 
         $process = new Process();
@@ -346,7 +346,7 @@ abstract class AsyncTask
      * @return AdapterInterface
      * @final
      */
-    final public function getAdapter(): AdapterInterface
+    final public function getAdapter(): ?AdapterInterface
     {
         return $this->adapter;
     }
@@ -357,7 +357,7 @@ abstract class AsyncTask
      * @return int
      * @final
      */
-    final public function getTaskNumber(): int
+    final public function getTaskNumber(): ?int
     {
         return $this->taskNumber;
     }
