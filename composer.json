@@ -5,23 +5,23 @@
     "keywords": ["task", "background", "asynchronous", "work days"],
     "version": "2.0.13",
     "license": "BSD-3-Clause",
-    "homepage": "https://bringer.pro/",
+    "homepage": "https://github.com/dmamontov",
     "authors": [
         {
             "name": "Dmitry Mamontov",
-            "email": "mamontov@bringer.pro",
+            "email": "d.slonyara@gmail.com",
             "role": "lead"
         }
     ],
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "7.*",
         "apigen/apigen": "4.*"
     },
     "support": {
-        "email": "mamontov@bringer.pro"
+        "email": "d.slonyara@gmail.com"
     },
     "autoload": {
         "psr-0": { "AsyncTask\\": "src/" }
